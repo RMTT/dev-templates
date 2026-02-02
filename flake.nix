@@ -13,6 +13,10 @@
           path = ./postgresql;
           description = "postgresql development";
         };
+        rust = {
+          path = ./rust;
+          description = "rust development";
+        };
       };
     };
 }
