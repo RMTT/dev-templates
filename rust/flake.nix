@@ -24,12 +24,15 @@
       in
       {
         devShells.default = (pkgs.mkShell.override { stdenv = pkgs.clangStdenv; }) {
-          buildInputs = with pkgs; [
+          nativeBuildInputs = with pkgs; [
             cargo
             rustc
-            pkg-config
             openssl
+            pkg-config
+            rust-analyzer
+            rustfmt
           ];
+          LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
         };
       }
     );
