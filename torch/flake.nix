@@ -42,6 +42,7 @@
             export CUDA_HOME=${cuda.cudatoolkit}
           '';
           LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+            pkgs.zlib
             pkgs.stdenv.cc.cc
             cuda.cudatoolkit
             cuda.cudnn
