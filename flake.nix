@@ -17,6 +17,10 @@
           path = ./rust;
           description = "rust development";
         };
+        linux = {
+          path = ./linux;
+          description = "linux kernel development";
+        };
       };
     };
 }
