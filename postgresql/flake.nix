@@ -25,7 +25,7 @@
       {
         devShells.default = (pkgs.mkShell.override { stdenv = pkgs.clangStdenv; }) {
           inputsFrom = [ pkgs.postgresql ];
-          nativeBuildInputs = with pkgs; [ bear ];
+          nativeBuildInputs = with pkgs; [ bear meson ninja];
         };
       }
     );
